@@ -2,37 +2,43 @@
   <v-app id="inspire">
     <v-navigation-drawer fixed v-model="drawer" app>
       <v-list dense>
+
         <router-link v-bind:to="{ name: 'Home' }" class="side_bar_link">
-          <v-list-tile>
-            <v-list-tile-action>
+          <v-list-item>
+            <v-list-item-action>
               <v-icon>home</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-content>Home</v-list-tile-content>
-          </v-list-tile>
+            </v-list-item-action>
+            <v-list-item-content>Home</v-list-item-content>
+          </v-list-item>
         </router-link>
+
         <router-link v-bind:to="{ name: 'Contact' }" class="side_bar_link">
-          <v-list-tile>
-            <v-list-tile-action>
+          <v-list-item>
+            <v-list-item-action>
               <v-icon>contact_mail</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-content>Contact</v-list-tile-content>
-          </v-list-tile>
+            </v-list-item-action>
+            <v-list-item-content>Contact</v-list-item-content>
+          </v-list-item>
         </router-link>
+
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar color="indigo" dark fixed app>
-      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+
+    <v-app-bar app color="indigo" dark fixed>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title>Home</v-toolbar-title>
-    </v-toolbar>
-    <v-content>
+    </v-app-bar>
+
+    <v-main>
       <v-container fluid>
         <div id="app">
           <router-view/>
         </div>
       </v-container>
-    </v-content>
+    </v-main>
+
     <v-footer color="indigo" app>
-      <span class="white--text">&copy; 2018</span>
+      <span class="white--text">&copy; 2020</span>
     </v-footer>
   </v-app>
 </template>
