@@ -27,7 +27,7 @@
     <v-content>
       <v-container fluid>
         <div id="app">
-          <router-view />
+          <router-view/>
         </div>
       </v-container>
     </v-content>
